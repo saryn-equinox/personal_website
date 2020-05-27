@@ -1,0 +1,79 @@
+body {
+    background-color: #e8e8e8;
+    background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+}
+
+.box {
+    margin: 4% 3%;
+    border: #e8e8e8 1px solid;
+    background-color: white;
+    border-radius: 4px;
+    padding: 1%;
+}
+
+.box a, #note-container a {
+    color: black;
+}
+
+.box a:hover, #note-container a:hover {
+    color: gray;
+}
+
+.note {
+    padding: 1%;
+    margin: 2% 0%;
+}
+
+.note .note-content {
+    text-align: left;
+}
+
+.note .note-time {
+    text-align: right;
+}
+
+#note-container .readMore {
+    text-align: left;
+}
+
+#note-container {
+    margin-top: 15%;
+}
+
+#homeHeader {
+    font-size: 6.5rem;
+    text-align: center;
+    padding: 2%;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    background-color: #454545;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+}
+
+#myImg {
+    margin: 10% auto;
+    display: block;
+    width: 65%;
+    border-radius: 25px;
+}
+
+#aside {
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+}
+
+#motto {
+    font-family: 'Ma Shan Zheng', 'Zhi Mang Xing', cursive;
+    font-size: large;
+}
+
+@media screen and (max-width: 992px) {
+    #aside {
+        display: none;
+    }
+
+    #motto {
+        display: none;
+    }
+}
