@@ -32,6 +32,11 @@ body {
     text-align: right;
 }
 
+#webBrand {
+    font-family: Dancing Script, cursive;
+    font-size: 2rem;
+}
+
 #note-container .readMore {
     text-align: left;
 }
@@ -43,7 +48,7 @@ body {
 #homeHeader {
     font-size: 6.5rem;
     text-align: center;
-    padding: 2%;
+    padding: 1.7%;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     background-color: #454545;
@@ -63,7 +68,7 @@ body {
     text-align: center;
 }
 
-#motto {
+.motto {
     font-family: 'Ma Shan Zheng', 'Zhi Mang Xing', cursive;
     font-size: large;
 }

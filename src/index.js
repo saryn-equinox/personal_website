@@ -1,6 +1,16 @@
 import ReactDOM from 'react-dom';
 import React from "react";
-import App from './components/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import * as Constants from "./constants"
+import App from "./components/App"
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App
+                bg={Constants.NavBG} 
+                variant={Constants.NavBG}
+                mottoContent={Constants.mottoContent}
+                greetingContent={Constants.greetingContent}
+                imgSrc={Constants.imgSrc}
+                footer={Constants.footerContent}
+                footerMotto={Constants.footerMotto}
+                brandName={Constants.brandName} />, document.getElementById("root"));
+

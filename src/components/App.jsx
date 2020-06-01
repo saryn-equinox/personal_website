@@ -1,25 +1,38 @@
-import React from 'react';
+import React, {useState} from "react";
+import Home from "./Home"
 import NavigationBar from "./NavigationBar"
-import Greeting from "./Greeting"
-import Layout from "./Layout"
-import * as Constants from "../constants"
+import Footer from "./Footer"
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    useRouteMatch,
+    useParams
+} from "react-router-dom";
+import About from "./About";
+import Blog from "./Blog";
+import Article from "./Article";
 
-let App = () => {
-    return (<div>
-        <NavigationBar 
-            sticky="top" 
-            bg={Constants.NavBG} 
-            variant={Constants.NavBG}
-            brand={Constants.brandName}
-            brandSize="2rem" 
-            items={Constants.NavBarItems}
-            brandFontFamily={Constants.brandFontFamily}
-            hasMoto = {true}
+let App = props => {
+    return (<Router>       
+        <NavigationBar
+            brandName={props.brandName}
+            mottoContent = {props.mottoContent}
         />
-        <Greeting content={Constants.greetingContent} id="homeHeader" />
-        <Layout imgSrc={Constants.imgSrc} />
-        <NavigationBar bg={Constants.NavBG} variant={Constants.NavBG} items={Constants.footer} />
-    </div>);                
-};
+        <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/blog" component={Blog} />
+            <Route path="/article" component={Article} />
+            <Route path="/" >
+                <Home greetingContent={props.greetingContent} imgSrc={props.imgSrc} />
+            </Route>            
+        </Switch>    
+        <Footer 
+            bg={props.bg} 
+            variant={props.variant} 
+            footer={props.footer}
+            footerMotto={props.footerMotto} />
+    </Router>)
+}
 
 export default App;

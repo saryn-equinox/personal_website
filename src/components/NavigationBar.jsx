@@ -1,15 +1,30 @@
 import React from 'react';
-import Nav from "./Nav"
-import Navbar from 'react-bootstrap/Navbar'
+import {
+    Switch,
+    Route,
+    Link,
+    useRouteMatch,
+    useParams
+} from "react-router-dom";
 
 let NavigationBar = props => {
-    return (<Navbar fixed={props.fixed} bg={props.bg} variant={props.variant} sticky={props.sticky}>
-                <Navbar.Brand
-                    href="./index.html" 
-                    style={{fontSize: props.brandSize, fontFamily: props.brandFontFamily}}>{props.brand}
-                </Navbar.Brand>
-                <Nav items={props.items} hasMoto={props.hasMoto}/>
-            </Navbar>)
+    return (<nav className="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+            <Link className="navbar-brand" to="/" id="webBrand">{props.brandName}</Link>
+                <ul className="navbar-nav mr-auto">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/">Home</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/blog">Blog</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/about">About</Link>
+                    </li>
+                </ul>
+            <span className="navbar-text motto">
+                <em>{props.mottoContent}</em>
+            </span>
+            </nav>);
 }
 
 export default NavigationBar;
