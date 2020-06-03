@@ -9,13 +9,13 @@ import {
 
 let PostBox = props => {
     return (<div className="box">
-        <strong>{props.genre}</strong>
-        <h2>{props.title}</h2>
-        <p>{props.abstract}</p>
-        <p>
-            <Link to="/article">Read More...</Link>
-        </p>
-    </div>)
+                <p><strong>{props.genre}</strong></p>
+                <h1>{props.title}</h1>
+                <p>{props.abstract}</p>
+                <p>
+                    <Link to="/article">Read More...</Link>
+                </p>
+        </div>)
 }
 
 export default PostBox;

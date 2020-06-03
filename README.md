@@ -2,12 +2,15 @@
 
 ## 项目目标
 
-搭建一个个人空间网站，将之前学习到的Javascript网站开发技术进行实际使用
+搭建一个个人空间网站，将之前学习到的Javascript网站开发技术进行实际使用.
 
 ## 项目时间表
 
 - 2020-05-27 完成个人网站的首页的前端设计
-    -   技术框架：React.js, Bootstrap4   
+    -   技术框架：React.js, Bootstrap4
+
+- 2020-06-2 完成个人网站的首页的前端设计以及routing
+    -   技术框架：React.js, Bootstrap4, React-router   
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

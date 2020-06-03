@@ -12,5 +12,7 @@ ReactDOM.render(<App
                 imgSrc={Constants.imgSrc}
                 footer={Constants.footerContent}
                 footerMotto={Constants.footerMotto}
-                brandName={Constants.brandName} />, document.getElementById("root"));
+                navBarItems = {Constants.navBarItems}
+                brandName={Constants.brandName}
+                blogGenre={Constants.blogGenre} />, document.getElementById("root"));
 

@@ -1,29 +1,23 @@
 import React from 'react';
+import NavItem from "./NavItem";
+import Motto from "./Motto";
 import {
-    Switch,
-    Route,
-    Link,
     useRouteMatch,
-    useParams
+    useParams,
+    Link
 } from "react-router-dom";
 
 let NavigationBar = props => {
-    return (<nav className="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+    return (<nav className={`navbar navbar-expand-sm navbar-light bg-light ${props.position} ${props.type}`}>
             <Link className="navbar-brand" to="/" id="webBrand">{props.brandName}</Link>
                 <ul className="navbar-nav mr-auto">
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/">Home</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/blog">Blog</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/about">About</Link>
-                    </li>
+                {Object.entries(props.navBarItems).map((val, idx) => {
+                    const name = val[0];
+                    const path = val[1];
+                    return <NavItem name={name} path={path} id={idx}/>
+                })}
                 </ul>
-            <span className="navbar-text motto">
-                <em>{props.mottoContent}</em>
-            </span>
+            <Motto mottoContent={props.mottoContent} />
             </nav>);
 }
 
